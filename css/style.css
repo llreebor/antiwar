@@ -67,10 +67,10 @@ h6 {
 }
 
 .container {
-  max-width: 1840px;
+  max-width: 1860px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 body {
@@ -514,13 +514,12 @@ body.locked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .photos__title {
@@ -663,6 +662,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 20px;
 }
 
 .footer__logos-item {
@@ -689,6 +689,18 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 80px;
+}
+
+@media (max-width: 1900px) {
+  .photos__item {
+    margin-top: 50px;
+  }
+
+  .photos__item img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 1449.98px) {
@@ -752,7 +764,7 @@ footer {
         -ms-flex: 0 1 60%;
             flex: 0 1 60%;
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 75px;
   }
 
   .about__item-title {
@@ -789,26 +801,6 @@ footer {
   .why__item-next {
     line-height: 130%;
     font-size: 22px;
-  }
-
-  .photos.first__row .photos__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 30%;
-            flex: 0 1 30%;
-  }
-
-  .photos.first__row .photos__item:last-child {
-    display: none;
-  }
-
-  .photos__item {
-    margin-top: 10px;
-  }
-
-  .photos__item img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
   }
 
   .section__statistic {
@@ -872,7 +864,7 @@ footer {
   }
 
   .about__item:last-child {
-    padding: 0 20px;
+    padding: 0 30px;
   }
 
   .why__item {
@@ -1064,10 +1056,14 @@ footer {
     padding: 40px 0;
   }
 
-  .photos.first__row .photos__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+  .photos.first__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .photos.second__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .photos {
@@ -1083,6 +1079,10 @@ footer {
     font-size: 18px;
     line-height: 27px;
     margin-bottom: 10px;
+  }
+
+  .photos__item {
+    margin-top: 10px;
   }
 
   .statistic {
